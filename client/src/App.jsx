@@ -1,10 +1,33 @@
 import './App.css'
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import Services from './pages/Services'
+import Works from './pages/Works'
+import Contact from './pages/Contact'
+import Faqs from './pages/Faqs'
+import Team from './pages/Team'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-3xl text-yellow-800'>WELCOME TO devXcops</h1>
+      <Navbar/>
+
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/services" element={<Services/>}/>
+        <Route path="/works" element={<Works/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/faqs" element={<Faqs/>}/>
+        <Route path="/team" element={<Team/>}/>
+        <Route path="*" element={<Navigate to="/"/>}/>
+      </Routes>
+      
+      <Footer/>
     </>
   )
 }
