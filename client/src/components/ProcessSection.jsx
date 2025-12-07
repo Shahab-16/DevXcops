@@ -36,7 +36,7 @@ const ProcessSection = () => {
         <div className="text-center mb-12">
           <p className="text-sm uppercase text-gray-500 tracking-wider">Our Process</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold mt-3">
-            How we <span className="text-blue-600">work</span>
+            How we <span className="text-purple-800">work</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mt-3">
             A pragmatic, transparent process that helps us deliver products that solve real problems.
@@ -46,7 +46,7 @@ const ProcessSection = () => {
         <div className="grid gap-8 md:grid-cols-4">
           {steps.map((s, i) => (
             <div key={s.title} className="flex flex-col items-start gap-4">
-              <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-blue-600">
+              <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-purple-800">
                 {s.icon}
               </div>
 
@@ -57,10 +57,10 @@ const ProcessSection = () => {
 
               {/* progress dots (only decorative) */}
               <div className="mt-3 flex items-center gap-2">
-                <span className={`w-2 h-2 rounded-full ${i >= 0 ? "bg-blue-600" : "bg-gray-300"}`} />
-                <span className={`w-2 h-2 rounded-full ${i >= 1 ? "bg-blue-600" : "bg-gray-300"}`} />
-                <span className={`w-2 h-2 rounded-full ${i >= 2 ? "bg-blue-600" : "bg-gray-300"}`} />
-                <span className={`w-2 h-2 rounded-full ${i >= 3 ? "bg-blue-600" : "bg-gray-300"}`} />
+                <span className={`w-2 h-2 rounded-full ${i >= 0 ? "bg-purple-600" : "bg-gray-300"}`} />
+                <span className={`w-2 h-2 rounded-full ${i >= 1 ? "bg-purple-600" : "bg-gray-300"}`} />
+                <span className={`w-2 h-2 rounded-full ${i >= 2 ? "bg-purple-600" : "bg-gray-300"}`} />
+                <span className={`w-2 h-2 rounded-full ${i >= 3 ? "bg-purple-600" : "bg-gray-300"}`} />
               </div>
             </div>
           ))}

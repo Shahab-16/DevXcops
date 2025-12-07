@@ -22,8 +22,8 @@ const Navbar = () => {
 
         <a href="/" className="inline-flex items-center gap-1 bg-black text-white rounded-full px-3 py-1 text-lg w-max">
           <FaCode className="text-white" />
-          <span className="font-medium">
-            dev<span className="text-blue-600">X</span>cops
+          <span className="font-bold">
+            dev<span className="text-purple-800">X</span>cops
           </span>
         </a>
 
@@ -34,7 +34,7 @@ const Navbar = () => {
             <li key={link.name}>
               <a
                 href={link.href}
-                className="text-black font-medium hover:text-blue-600 transition"
+                className="text-black font-medium hover:text-purple-800 transition"
               >
                 {link.name}
               </a>
@@ -46,7 +46,7 @@ const Navbar = () => {
         <div className="hidden md:block">
           <a
             href="/contact"
-            className="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition"
+            className="bg-black hover:bg-gray-800 text-white font-semibold px-4 py-2 rounded-lg shadow transition"
           >
             Let's Talk
           </a>
@@ -69,7 +69,7 @@ const Navbar = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="block text-black font-semibold py-2 hover:text-blue-600 transition"
+                  className="block text-black font-semibold py-2 hover:text-purple-800 transition"
                   onClick={() => setOpen(false)}
                 >
                   {link.name}
@@ -79,7 +79,7 @@ const Navbar = () => {
 
             <a
               href="/contact"
-              className="mt-2 bg-blue-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
+              className="mt-2 bg-black text-white text-center py-2 rounded-lg font-semibold transition"
               onClick={() => setOpen(false)}
             >
               Let's Talk

@@ -26,7 +26,7 @@ const Footer = () => {
           {/* BUTTON */}
           <a
             href="/contact"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2 transition"
+            className="bg-purple-800 hover:bg-purple-600 text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2 transition"
           >
             Contact Us <FaArrowRight />
           </a>
@@ -43,7 +43,7 @@ const Footer = () => {
               <FaCode className="text-white text-lg" />
               <span>
                 <span className="text-white">dev</span>
-                <span className="text-blue-600">X</span>
+                <span className="text-purple-800">X</span>
                 <span className="text-white">cops</span>
               </span>
             </div>

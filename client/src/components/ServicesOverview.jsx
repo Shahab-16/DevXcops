@@ -19,7 +19,7 @@ const ServicesOverview = () => {
               key={i}
               className="p-8 bg-white border rounded-xl shadow-sm hover:shadow-lg transition text-center"
             >
-              <div className="text-blue-600 text-4xl mb-4">{item.icon}</div>
+              <div className="text-purple-800 text-4xl mb-4">{item.icon}</div>
               <h3 className="font-bold text-lg mb-2">{item.title}</h3>
               <p className="text-gray-600">{item.desc}</p>
             </div>

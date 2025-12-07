@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const CtaBanner = () => {
   return (
-    <section className="bg-blue-600 text-white">
+    <section className="bg-purple-800 text-white">
       <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
           <h3 className="text-2xl sm:text-3xl font-extrabold">
@@ -24,7 +24,7 @@ const CtaBanner = () => {
         <div className="flex items-center gap-4">
           <a
             href="/contact"
-            className="inline-flex items-center bg-white text-blue-600 px-5 py-3 rounded-lg font-semibold shadow hover:translate-y-[-2px] transition-transform"
+            className="inline-flex items-center bg-white text-purple-800 px-5 py-3 rounded-lg font-semibold shadow hover:translate-y-[-2px] transition-transform"
           >
             Start a Project
             <FaArrowRight className="ml-3" />

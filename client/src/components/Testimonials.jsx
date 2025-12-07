@@ -56,7 +56,7 @@ const Testimonials = () => {
             Testimonials
           </p>
           <h2 className="text-3xl sm:text-4xl font-extrabold mt-3">
-            What our <span className="text-blue-600">clients say</span>
+            What our <span className="text-purple-800">clients say</span>
           </h2>
         </div>
 
@@ -67,7 +67,7 @@ const Testimonials = () => {
               <div className="bg-white rounded-xl shadow-md p-8 border">
                 
                 {/* Quote Icon */}
-                <div className="text-blue-600 text-3xl mb-4">
+                <div className="text-purple-800 text-3xl mb-4">
                   <FaQuoteLeft />
                 </div>
 

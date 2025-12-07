@@ -19,7 +19,7 @@ const Industries = () => {
           {industries.map((name, i) => (
             <div
               key={i}
-              className="p-6 text-center bg-white rounded-xl border hover:border-blue-600 shadow-sm hover:shadow-md transition font-semibold"
+              className="p-6 text-center bg-white rounded-xl border hover:border-purple-600 shadow-sm hover:shadow-md transition font-semibold"
             >
               {name}
             </div>

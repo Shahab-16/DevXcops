@@ -59,7 +59,7 @@ const TechStack = () => {
     { icon: <FaApple />, label: "iOS" },
 
     // Web & styling
-    { icon: <SiTailwindcss className="text-blue-600" />, label: "Tailwind CSS" },
+    { icon: <SiTailwindcss className="text-purple-800" />, label: "Tailwind CSS" },
     { icon: <SiJavascript />, label: "JavaScript" },
     { icon: <SiTypescript />, label: "TypeScript" },
 
@@ -99,7 +99,7 @@ const TechStack = () => {
           {techs.map((item, index) => (
             <div key={index} className="flex justify-center">
               <div className="flex flex-col items-center text-gray-800">
-                <div className="text-5xl text-blue-600">{item.icon}</div>
+                <div className="text-5xl text-purple-800">{item.icon}</div>
                 <p className="mt-2 font-semibold">{item.label}</p>
               </div>
             </div>

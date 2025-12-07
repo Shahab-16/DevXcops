@@ -47,7 +47,7 @@ const About = () => {
 
           <button
             onClick={() => navigate("/contact")}
-            className="mt-8 bg-red-500 hover:bg-red-600 px-8 py-3 rounded-full text-lg font-bold shadow-lg transition-all duration-300"
+            className="mt-8 bg-purple-800 hover:bg-purple-600 px-8 py-3 rounded-full text-lg font-bold shadow-lg transition-all duration-300"
           >
             Contact Us
           </button>
@@ -249,7 +249,7 @@ const Accordion = ({ title, children }) => {
         className="w-full flex justify-between items-center text-left"
       >
         <span className="text-xl font-semibold">{title}</span>
-        <span className="text-3xl font-bold text-red-500">
+        <span className="text-3xl font-bold text-purple-800">
           {open ? "−" : "+"}
         </span>
       </button>

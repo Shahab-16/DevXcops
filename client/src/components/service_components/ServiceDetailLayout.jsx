@@ -32,7 +32,7 @@ const ServiceDetailLayout = ({ service }) => {
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <h1 className="text-5xl md:text-6xl font-bold mb-4">{service.heroTitle}</h1>
                     <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">{service.heroSubtitle}</p>
-                    <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-md font-semibold transition-colors">
+                    <button className="bg-purple-800 hover:bg-purple-600 text-white px-8 py-3 rounded-md font-semibold transition-colors">
                         Contact Us
                     </button>
                 </div>

@@ -11,7 +11,7 @@ const HeroSection = () => {
         <div className="space-y-6">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
             We build powerful{" "}
-            <span className="text-blue-600">websites & apps</span> that grow
+            <span className="text-purple-800">websites & apps</span> that grow
             your business.
           </h1>
 
@@ -25,7 +25,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
             <a
               href="/contact"
-              className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 rounded-lg shadow-lg transition"
+              className="inline-flex items-center justify-center bg-purple-800 hover:bg-purple-600 text-white font-semibold px-5 py-3 rounded-lg shadow-lg transition"
             >
               Get Started
               <FiChevronRight className="ml-2" />

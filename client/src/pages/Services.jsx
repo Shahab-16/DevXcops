@@ -105,7 +105,7 @@ const Services = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Services</h2>
           <p className="text-gray-600 text-lg">Leave us a little info, and we'll be in touch.</p>
-          <button className="mt-6 px-8 py-3 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition">
+          <button className="mt-6 px-8 py-3 bg-purple-800 text-white font-semibold rounded-full hover:bg-red-700 transition">
             Contact Us
           </button>
         </div>

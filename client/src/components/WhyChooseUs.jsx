@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
         
         <div>
           <h2 className="text-3xl font-bold mb-6">
-            Knowledge Behind <span className="text-blue-600">What We Build</span>
+            Knowledge Behind <span className="text-purple-800">What We Build</span>
           </h2>
 
           <p className="text-gray-600 mb-6">
@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
           <div className="grid gap-4">
             {features.map((f, i) => (
               <div key={i} className="flex gap-3 items-center">
-                <FaCheckCircle className="text-blue-600" />
+                <FaCheckCircle className="text-purple-800" />
                 <p className="font-medium">{f}</p>
               </div>
             ))}
