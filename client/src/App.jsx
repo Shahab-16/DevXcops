@@ -9,25 +9,27 @@ import Works from './pages/Works'
 import Contact from './pages/Contact'
 import Faqs from './pages/Faqs'
 import Team from './pages/Team'
+import ServiceDetail from './components/service_components/ServiceDetail';
 
 function App() {
 
   return (
     <>
-      <Navbar/>
+      <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/services" element={<Services/>}/>
-        <Route path="/works" element={<Works/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/faqs" element={<Faqs/>}/>
-        <Route path="/team" element={<Team/>}/>
-        <Route path="*" element={<Navigate to="/"/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/:serviceName" element={<ServiceDetail />} />
+        <Route path="/works" element={<Works />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faqs" element={<Faqs />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-      
-      <Footer/>
+
+      <Footer />
     </>
   )
 }

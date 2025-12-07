@@ -19,14 +19,14 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 px-[8%] w-full bg-white/80 backdrop-blur shadow-sm">
       <nav className="max-w-[1600px] px-4 py-4 flex items-center justify-between">
         {/* LOGO */}
-        
-          <a href="/" className="inline-flex items-center gap-1 bg-black text-white rounded-full px-3 py-1 text-lg w-max">
-            <FaCode className="text-white" />
-            <span className="font-medium">
-              dev<span className="text-blue-600">X</span>cops
-            </span>
-          </a>
-    
+
+        <a href="/" className="inline-flex items-center gap-1 bg-black text-white rounded-full px-3 py-1 text-lg w-max">
+          <FaCode className="text-white" />
+          <span className="font-medium">
+            dev<span className="text-blue-600">X</span>cops
+          </span>
+        </a>
+
 
         {/* Desktop menu */}
         <ul className="hidden md:flex items-center gap-6">

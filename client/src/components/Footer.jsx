@@ -8,7 +8,7 @@ const Footer = () => {
       {/* FULL WIDTH CTA SECTION */}
       <div className="w-full border-b border-gray-700">
         <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          
+
           {/* LEFT TEXT */}
           <div>
             <p className="uppercase text-sm text-gray-400 tracking-wider mb-2">Let's Talk</p>
