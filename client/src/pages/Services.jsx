@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import services_img from "../assets/images/services_img.png";
 
 const Services = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -104,34 +105,52 @@ const Services = () => {
         "100% Original Designs",
       ],
     },
-  ]
+  ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Services</h2>
-          <p className="text-gray-600 text-lg">Leave us a little info, and we'll be in touch.</p>
-          <button className="mt-6 px-8 py-3 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transition">
+    <div className="bg-white">
+
+      {/* 🔥 HERO SECTION LIKE ABOUT US */}
+      <section
+        className="mt-[5%] relative h-[70vh] md:h-[88vh] bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: `url(${services_img})` }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Center Content */}
+        <div className="relative text-center text-white z-10 px-4">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4">Services</h2>
+
+          <p className="text-lg md:text-xl mb-6">
+            Leave us a little info, and we'll be in touch.
+          </p>
+
+          <button className="mt-4 px-8 py-3 bg-purple-700 text-white text-lg font-semibold rounded-full hover:bg-purple-900 transition">
             Contact Us
           </button>
         </div>
+      </section>
 
-          {/* Services Grid */}
+      {/* 🔥 SERVICES GRID BELOW HERO */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-300 rounded-lg p-8 shadow-sm hover:shadow-xl transition-shadow duration-300"
+                className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-xl transition"
               >
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {service.title}
+                </h3>
+
+                <p className="text-gray-600 mb-6">{service.description}</p>
 
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
-                      <span className="text-red-600 mr-3 mt-1">✔</span>
+                      <span className="text-purple-700 mr-3 mt-1">✔</span>
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -139,7 +158,7 @@ const Services = () => {
 
                 <button
                   onClick={() => navigate(`/services/${service.path}`)}
-                  className="px-6 py-3 bg-black text-white font-medium rounded hover:bg-purple-600 transition cursor-pointer flex items-center gap-2"
+                  className="px-6 py-3 bg-black text-white rounded hover:bg-purple-700 transition"
                 >
                   Explore More →
                 </button>
@@ -148,8 +167,9 @@ const Services = () => {
           </div>
         </div>
       </section>
-    </>
-  )
-}
 
-export default Services
+    </div>
+  );
+};
+
+export default Services;
