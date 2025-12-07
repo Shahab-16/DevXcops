@@ -8,7 +8,7 @@ const AccordionItem = ({ title, description, isOpen, onClick }) => {
         <div className="border-b border-gray-300">
             <button
                 onClick={onClick}
-                className="w-full text-left py-5 flex items-center justify-between text-lg font-semibold text-gray-800 hover:text-purple-600 transition-colors"
+                className="w-full text-left py-5 flex items-center justify-between text-lg font-semibold text-gray-800 hover:text-purple-600 transition-colors cursor-pointer"
             >
                 {title}
                 <span className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>+</span>
@@ -97,7 +97,13 @@ const ServiceDetailLayout = ({ service }) => {
                     </div>
                 </div>
 
-
+                {/* Back Button */}
+                <div className="text-center pt-12">
+                    <Link to="/" className="inline-flex items-center gap-2 text-purple-600 font-semibold text-lg hover:underline">
+                        <span>←</span>
+                        Back to All Services
+                    </Link>
+                </div>
             </div>
         </div>
     )
