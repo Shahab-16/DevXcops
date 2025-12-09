@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "only4u-training",
+    "title": "Only4U Training Portal",
+    "shortDescription": "A training & course portal with course listings, FAQ, testimonials and a modern learner experience.",
+    "longDescription": "Only4U Training Portal is a responsive web frontend that organizes courses, FAQs, testimonials and a seamless student onboarding flow. The product focuses on discoverability of courses, easy enrollment, and an accessible UI for learners and admins.",
+    "image": "project1.png",
+    "screenshots": ["project1.png"],
+    "techStacks": ["react", "tailwindcss", "vite", "react-router", "framer-motion"],
+    "clientName": "Only4U",
+    "clientReview": "Great collaboration — delivered a clean UI, fast performance and an intuitive course experience. The team was responsive throughout the project.",
+    "details": [
+      "Course listing page with search, filters and categories",
+      "FAQ and testimonials components integrated with CMS",
+      "Responsive, accessible UI with focus on performance",
+      "Enrollment flows and CTA funnels"
+    ],
+    "features": [
+      "Course discovery with tags & category filters",
+      "Testimonial carousel and FAQ accordion",
+      "Admin-friendly content structure for easy edits",
+      "Mobile-friendly layout and optimized assets"
+    ],
+    "problemStatement": "Only4U needed a modern learner-facing frontend that made it easy for users to find courses, read testimonials and enroll. The existing UI was dated and not mobile-optimized.",
+    "solutionSummary": "We delivered a responsive React frontend using TailwindCSS, optimized assets and modular components so the client can scale course content quickly. The UI is fast, accessible and easy to maintain.",
+    "metrics": {
+      "uptime": "99.9%",
+      "firstUsers": "1,200",
+      "conversion": "12%"
+    },
+    "impactSummary": "Within the first month the client reported improved course enrollments (≈12% uplift) and positive feedback on ease-of-use. The frontend shipped with a clear pattern library for future growth.",
+    "teamSize": "1",
+    "role": "Frontend Development",
+    "duration": "1 week",
+    "completedAt": "March 2025",
+    "caseStudyUrl": null,
+    "repoUrl": null,
+    "liveUrl": null,
+    "year": "2025"
+  },
+  {
+    "slug": "hr-diagnostic-platform",
+    "title": "HR Diagnostic Testing Platform",
+    "shortDescription": "A web platform for HR teams to create diagnostic MCQ tests, collect responses and generate AI-powered reports.",
+    "longDescription": "This platform enables HR teams to upload a question bank (Excel), create diagnostic assessments, let participants take tests and then generate AI-driven diagnostic reports that include tables, radar data and strategic recommendations.",
+    "image": "project2.png",
+    "screenshots": ["project2.png"],
+    "techStacks": [
+      "postgresql",
+      "prisma",
+      "react",
+      "tailwindcss",
+      "express",
+      "nodejs",
+      "OpenAI GPT API",
+      "excel upload",
+      "vercel"
+    ],
+    "clientName": "HR Insights Co.",
+    "clientReview": "Robust platform with clear user flows and excellent AI-generated diagnostic reports. The radar visualizations added strong value to leadership insights.",
+    "details": [
+      "Admin UI to upload Excel and manage the question bank",
+      "Participant MCQ test-taking UI with scoring",
+      "Result processing and structured payload to ChatGPT for report generation",
+      "Radar chart visualization and exportable reports (PDF/HTML)"
+    ],
+    "features": [
+      "Excel import for bulk questions & maturity scores",
+      "Admin question CRUD and area categorization",
+      "Participant links and secure result submission",
+      "ChatGPT integration for strategic report generation"
+    ],
+    "problemStatement": "HR teams lacked a consolidated tool to quickly diagnose organizational maturity across HR areas and get actionable recommendations. Manual reporting was slow and inconsistent.",
+    "solutionSummary": "We built an end-to-end platform: question-bank ingestion, test-taking UI, scoring pipeline, and automated report generation using ChatGPT. Outputs include tabular summaries, score distributions and radar chart data for quick leadership insights.",
+    "metrics": {
+      "uptime": "99.8%",
+      "firstUsers": "450",
+      "conversion": "—",
+      "reportsGenerated": "320"
+    },
+    "impactSummary": "The platform reduced report turnaround from days to minutes and enabled HR teams to run cohort analyses. Leadership used the radar visuals to prioritize interventions.",
+    "teamSize": "2",
+    "role": "Full-stack (Frontend + API integration)",
+    "duration": "2 weeks",
+    "completedAt": "June 2025",
+    "caseStudyUrl": null,
+    "repoUrl": null,
+    "liveUrl": null,
+    "year": "2025"
+  }
+]
