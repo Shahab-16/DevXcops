@@ -11,7 +11,7 @@ import Contact from './pages/Contact'
 import Faqs from './pages/Faqs'
 import Team from './pages/Team'
 import ServiceDetail from './components/service_components/ServiceDetail';
-
+import ProfilePage from './pages/ProfilePage';
 function App() {
 
   return (
@@ -28,6 +28,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/team" element={<Team />} />
+         <Route path="/team/:name" element={<ProfilePage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
 
