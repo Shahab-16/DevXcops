@@ -8,7 +8,7 @@ const Works = () => {
     <div className="bg-white text-black">
       {/* HERO */}
       <section
-        className="mt-[5%] relative h-[70vh] md:h-[88vh] bg-cover bg-center flex items-center justify-center"
+        className="mt-[18%] md:mt-[5%] relative h-[70vh] md:h-[88vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${work_img})` }}
       >
         <div className="absolute inset-0 bg-black/60"></div>

@@ -98,7 +98,7 @@ const Services = () => {
 
       {/* 🔥 HERO SECTION LIKE ABOUT US */}
       <section
-        className="mt-[5%] relative h-[70vh] md:h-[88vh] bg-cover bg-center flex items-center justify-center"
+        className="mt-[18%] md:mt-[5%] relative h-[70vh] md:h-[88vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${services_img})` }}
       >
         {/* Dark overlay */}
@@ -112,7 +112,7 @@ const Services = () => {
             Leave us a little info, and we'll be in touch.
           </p>
 
-          <button className="mt-4 px-8 py-3 bg-purple-700 text-white text-lg font-semibold rounded-full hover:bg-purple-900 transition">
+          <button onClick={() => navigate("/contact")} className="mt-4 px-8 py-3 bg-purple-700 text-white text-lg font-semibold rounded-full hover:bg-purple-900 transition">
             Contact Us
           </button>
         </div>
