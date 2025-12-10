@@ -91,20 +91,6 @@ const Services = () => {
         "Usability Testing",
       ],
     },
-    {
-      title: "Logo Design",
-      path: "logo-design",
-      description:
-        "Professional logo design services tailored to your business vision — clean, creative, and built to stand out.",
-      features: [
-        "Unique & Creative Concepts",
-        "Brand Identity Development",
-        "Vector & High-Res Files",
-        "Multiple Format Support",
-        "Quick Turnaround",
-        "100% Original Designs",
-      ],
-    },
   ];
 
   return (

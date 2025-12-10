@@ -1,0 +1,152 @@
+[
+  {
+    "name": "MD Shahab Uddin",
+    "role": "Team Lead | Full-Stack Developer",
+    "img": "https://res.cloudinary.com/dpxhn65ao/image/upload/v1765404204/WhatsApp_Image_2025-12-11_at_3.28.12_AM_h2b7qm.jpg",
+    "about": "Leads development of scalable web & mobile applications with expertise in frontend architecture, backend systems, and efficient build processes.",
+    "techStack": [
+      "Next.js",
+      "React",
+      "React Native",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Kafka",
+      "TailwindCSS",
+      "TypeScript",
+      "Android"
+    ],
+    "projects": [
+      "Built scalable full-stack platforms using MERN + Next.js",
+      "Developed mobile applications with React Native & Android",
+      "Designed CI/CD workflows and optimized build pipelines"
+    ],
+    "highlights": [
+      "Strong focus on performance & architectural decisions",
+      "Experience leading multi-developer engineering teams",
+      "Expert in reusable component systems & UI engineering"
+    ],
+    "location": "India",
+    "experience": "1.5+ Years",
+    "availability": "Full-time",
+    "linkedin": "https://linkedin.com/in/shahab",
+    "github": "https://github.com/shahab",
+    "email": "shahab@example.com"
+  },
+  {
+    "name": "Arsalan Ahmed",
+    "role": "Full-Stack Web Developer (MERN)",
+    "img": "https://res.cloudinary.com/dpxhn65ao/image/upload/v1765395514/Default_Img_o3eqai.png",
+    "about": "MERN specialist experienced in building optimized and maintainable full-stack applications.",
+    "techStack": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redux",
+      "TailwindCSS",
+      "TypeScript",
+      "REST APIs"
+    ],
+    "projects": [
+      "Developed modular MERN-based dashboards",
+      "Optimized backend queries and API performance",
+      "Built reusable UI components with TailwindCSS"
+    ],
+    "highlights": [
+      "Clean architecture and scalable code practices",
+      "Strong understanding of state management",
+      "Reliable API development and integration"
+    ],
+    "location": "India",
+    "experience": "3+ Years",
+    "availability": "Full-time"
+  },
+  {
+    "name": "Mohammad Amir",
+    "role": "Full-Stack Developer (MERN + Next.js)",
+    "img": "https://res.cloudinary.com/dpxhn65ao/image/upload/v1765404210/WhatsApp_Image_2025-12-11_at_3.32.38_AM_fvj64p.jpg",
+    "about": "Builds SEO-friendly, high-performance web applications using modern MERN and Next.js patterns.",
+    "techStack": [
+      "Next.js",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "TailwindCSS",
+      "TypeScript",
+      "Vercel"
+    ],
+    "projects": [
+      "Designed high-performance SSR/SSG applications",
+      "Implemented reusable Next.js based layouts",
+      "Created scalable backend routes with Express"
+    ],
+    "highlights": [
+      "Strong understanding of rendering strategies",
+      "Pixel-perfect frontend implementation",
+      "Optimized REST APIs and deployments"
+    ],
+    "location": "India",
+    "experience": "1+ Years",
+    "availability": "Full-time"
+  },
+  {
+    "name": "Aryan Vasudeva",
+    "role": "iOS Developer | ML Engineer (NLP)",
+    "img": "https://res.cloudinary.com/dpxhn65ao/image/upload/v1765395514/Default_Img_o3eqai.png",
+    "about": "Native iOS developer integrating smooth UI with on-device ML and NLP-driven features.",
+    "techStack": [
+      "Swift",
+      "SwiftUI",
+      "Core ML",
+      "TensorFlow Lite",
+      "Combine",
+      "Xcode",
+      "REST APIs",
+      "NLP"
+    ],
+    "projects": [
+      "Built native iOS apps using SwiftUI",
+      "Integrated on-device machine learning models",
+      "Developed NLP-powered features for mobile apps"
+    ],
+    "highlights": [
+      "Strong Swift + SwiftUI architecture skills",
+      "On-device ML integration expertise",
+      "Focus on buttery-smooth UX"
+    ],
+    "location": "India",
+    "experience": "1+ Years",
+    "availability": "Full-time"
+  },
+  {
+    "name": "Rakesh Barik",
+    "role": "Full-Stack Web Developer (MERN)",
+    "img": "https://res.cloudinary.com/dpxhn65ao/image/upload/v1765395641/WhatsApp_Image_2025-12-10_at_11.32.14_PM_kdguib.jpg",
+    "about": "Full-stack developer focused on creating stable APIs and scalable web platforms.",
+    "techStack": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redux",
+      "REST APIs",
+      "TailwindCSS",
+      "Docker"
+    ],
+    "projects": [
+      "Built reliable backend services using Express",
+      "Developed responsive web dashboards",
+      "Containerized apps with Docker for scalable deployments"
+    ],
+    "highlights": [
+      "Strong backend logic implementation",
+      "Component-based UI development",
+      "Experience with containerized workflows"
+    ],
+    "location": "India",
+    "experience": "1+ Years",
+    "availability": "Full-time"
+  }
+]

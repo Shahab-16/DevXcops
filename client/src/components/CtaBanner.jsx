@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const CtaBanner = () => {
   return (
-    <section className="bg-purple-800 text-white">
+    <section className="bg-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
           <h3 className="text-2xl sm:text-3xl font-extrabold">

@@ -1,106 +1,142 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import teamMembers from "../assets/TeamMembers/TeamMembers.json";
 
-// All team data including about text for the profile page
-const teamMembers = [
-  {
-    name: "John Doe",
-    role: "CEO & Founder",
-    img: "https://randomuser.me/api/portraits/men/75.jpg",
-    techStack: ["Leadership", "Strategy", "Product Vision"],
-    about:
-      "John has experience building and scaling products. He specializes in strategy, product development, and team leadership, driving impactful solutions for clients.",
-  },
-  {
-    name: "Sarah Wilson",
-    role: "Lead Designer",
-    img: "https://randomuser.me/api/portraits/women/65.jpg",
-    techStack: ["Figma", "UI/UX", "Branding", "Illustrator"],
-    about:
-      "Sarah is passionate about design systems and digital experiences. She has led UI/UX development for multiple products, enhancing usability and branding.",
-  },
-  {
-    name: "Alex Carter",
-    role: "Full-Stack Developer",
-    img: "https://randomuser.me/api/portraits/men/52.jpg",
-    techStack: ["React", "Node.js", "MongoDB", "Socket.io"],
-    about:
-      "Alex works on scalable web applications using MERN stack technologies. He enjoys building real-time systems and enhancing performance through optimized design.",
-  },
-  {
-    name: "Emily Johnson",
-    role: "Marketing Head",
-    img: "https://randomuser.me/api/portraits/women/44.jpg",
-    techStack: ["SEO", "Analytics", "Growth Strategy"],
-    about:
-      "Emily leads growth strategies and brand positioning. She specializes in digital marketing, with a focus on analytics and content-driven growth for products.",
-  },
-];
+const slugify = (name) =>
+  name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
-// Helper to format URL slug
-function slugify(name) {
-  return name.toLowerCase().replace(/ /g, "-");
-}
-
-const Team = () => {
+const Avatar = ({ src, alt }) => {
+  const fallback = "/assets/TeamMembers/Default_Img.png";
   return (
-    <section className="bg-gray-50 mt-[69px]">
-
-      {/* 🔥 Hero Banner */}
-      <div className="relative w-full h-[95vh] flex items-center justify-center">
-        <img
-          src="https://img.freepik.com/free-photo/meeting-communication-planning-business-people-concept_53876-16083.jpg?semt=ais_hybrid&w=740&q=80"
-          alt="Team Banner"
-          className="w-full h-full object-cover"
-        />
-
-        {/* Overlay content */}
-        <div className="absolute inset-0 bg-black/55 flex flex-col items-center justify-center text-center px-6">
-          <h1 className="text-5xl font-bold text-white mb-4">Our Team</h1>
-          <p className="text-lg text-white max-w-2xl leading-relaxed">
-            People behind our successful projects — explore to know more about their skills and roles.
-          </p>
-
-          {/* Scroll Button */}
-          <button
-            onClick={() =>
-              document.getElementById("team-grid").scrollIntoView({
-                behavior: "smooth",
-              })
-            }
-            className="mt-6 px-8 py-3 bg-purple-600 text-white font-semibold rounded-full hover:bg-purple-700 transition-all"
-          >
-            Meet The Team
-          </button>
-        </div>
-      </div>
-
-      {/* 🟣 Team Member Grid */}
-      <div id="team-grid" className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-center mb-12">Team Members</h2>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {teamMembers.map((member, index) => (
-            <Link
-              key={index}
-              to={`/team/${slugify(member.name)}`}
-              state={member} // full profile data passed to profile page
-            >
-              <div className="cursor-pointer bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 text-center">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-32 h-32 object-cover rounded-full mx-auto mb-4"
-                />
-                <h3 className="text-xl font-semibold">{member.name}</h3>
-                <p className="text-sm text-gray-600">{member.role}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
+    <img
+      src={src || fallback}
+      alt={alt}
+      onError={(e) => (e.currentTarget.src = fallback)}
+      className="w-full h-full object-cover"
+    />
   );
 };
 
-export default Team;
+const TeamCard = ({ member }) => (
+  <article className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden border border-gray-100">
+    <div className="relative h-70 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 z-10" />
+      <img
+        src={member.img}
+        alt={member.name}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        onError={(e) => {
+          e.target.src = "/assets/TeamMembers/Default_Img.png";
+        }}
+      />
+      
+      <div className="absolute bottom-4 left-4 z-20">
+        <h3 className="text-white font-bold text-xl drop-shadow-md">{member.name}</h3>
+        <p className="text-sm text-white/90 drop-shadow">{member.role}</p>
+      </div>
+    </div>
+
+    <div className="p-5">
+      <p className="text-gray-700 text-sm mb-4 line-clamp-3">{member.about}</p>
+
+      <div className="flex flex-wrap gap-1.5 mb-4">
+        {member.techStack.slice(0, 5).map((tech, index) => (
+          <span
+            key={index}
+            className="text-xs px-2.5 py-1 bg-gray-100 border border-gray-200 rounded-lg text-gray-700"
+          >
+            {tech}
+          </span>
+        ))}
+        {member.techStack.length > 5 && (
+          <span className="text-xs px-2.5 py-1 bg-gray-100 border border-gray-200 rounded-lg text-gray-500">
+            +{member.techStack.length - 5} more
+          </span>
+        )}
+      </div>
+
+      <div className="flex items-center gap-3 pt-2">
+        <Link
+          to={`/team/${slugify(member.name)}`}
+          state={member}
+          className="flex-1 text-center px-4 py-2.5 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium hover:from-purple-700 hover:to-indigo-700 transition-all duration-300"
+        >
+          View Profile
+        </Link>
+
+        {member.name === "MD Shahab Uddin" && (
+          <a
+            href="https://shahabportfoliowebsite.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2.5 bg-gray-800 hover:bg-gray-900 rounded-lg text-white transition-colors"
+          >
+            <FaExternalLinkAlt className="text-sm" />
+          </a>
+        )}
+      </div>
+    </div>
+  </article>
+);
+
+export default function Team() {
+  return (
+    <div className="bg-gray-50 min-h-screen pt-20">
+      {/* Hero Section */}
+      <div className="relative h-[85vh] overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600"
+            alt="Team Banner"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/60" />
+        </div>
+        
+        <div className="relative h-full flex items-center justify-center text-center px-6">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Meet Our Team
+            </h1>
+            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+              A team of passionate developers building cutting-edge solutions with modern technologies.
+            </p>
+            <div className="flex justify-center">
+              <a
+                href="#team-members"
+                className="px-8 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300"
+              >
+                Explore Team Members
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Team Grid */}
+      <div id="team-members" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Our Development Experts
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Each member brings unique expertise and experience to deliver exceptional results.
+          </p>
+        </div>
+
+        <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+          {teamMembers.map((member, index) => (
+            <TeamCard key={index} member={member} />
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-gray-500 text-sm">
+            Click on any profile to view detailed information about skills, projects, and experience.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
