@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 px-[8%] w-full bg-white/80 backdrop-blur shadow-sm">
+    <header className="fixed top-0 left-0 px-[8%] w-full bg-white/80 backdrop-blur shadow-sm z-50">
       <nav className="max-w-[1600px] px-4 py-4 flex items-center justify-between">
         {/* LOGO */}
 
