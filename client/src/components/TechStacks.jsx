@@ -57,13 +57,9 @@ const TechStack = () => {
     { icon: <SiFlutter />, label: "Flutter" },
     { icon: <FaAndroid />, label: "Android" },
     { icon: <FaApple />, label: "iOS" },
-
-    // Web & styling
     { icon: <SiTailwindcss className="text-purple-800" />, label: "Tailwind CSS" },
     { icon: <SiJavascript />, label: "JavaScript" },
     { icon: <SiTypescript />, label: "TypeScript" },
-
-    // Backend
     { icon: <SiNodedotjs />, label: "Node.js" },
     { icon: <SiExpress />, label: "Express.js" },
     { icon: <FaPhp />, label: "PHP" },
@@ -72,8 +68,6 @@ const TechStack = () => {
     { icon: <SiFastapi />, label: "FastAPI" },
     { icon: <SiGraphql />, label: "GraphQL" },
     { icon: <FaPython />, label: "Python" },
-
-    // Databases
     { icon: <SiMongodb />, label: "MongoDB" },
     { icon: <SiMysql />, label: "MySQL" },
     { icon: <SiPostgresql />, label: "PostgreSQL" },
@@ -81,17 +75,15 @@ const TechStack = () => {
     { icon: <SiFirebase />, label: "Firebase" },
     { icon: <SiSupabase />, label: "Supabase" },
     { icon: <SiPrisma />, label: "Prisma ORM" },
-
-    // DevOps & Tools
     { icon: <FaDocker />, label: "Docker" },
     { icon: <SiKubernetes />, label: "Kubernetes" },
     { icon: <FaGitAlt />, label: "Git" },
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl mx-auto font-bold text-black mb-12">
+    <section className="py-12 md:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-8 md:mb-12 text-center">
           Our Technology Expertise
         </h2>
 
@@ -99,8 +91,12 @@ const TechStack = () => {
           {techs.map((item, index) => (
             <div key={index} className="flex justify-center">
               <div className="flex flex-col items-center text-gray-800">
-                <div className="text-5xl text-purple-800">{item.icon}</div>
-                <p className="mt-2 font-semibold">{item.label}</p>
+                <div className="text-3xl sm:text-4xl md:text-5xl text-purple-800">
+                  {item.icon}
+                </div>
+                <p className="mt-2 text-sm sm:text-base font-semibold">
+                  {item.label}
+                </p>
               </div>
             </div>
           ))}
