@@ -65,7 +65,7 @@ const Testimonials = () => {
           {testimonials.map((t, i) => (
             <div key={i} className="px-3">
               <div className="bg-white rounded-xl shadow-md p-8 border">
-                
+
                 {/* Quote Icon */}
                 <div className="text-purple-800 text-3xl mb-4">
                   <FaQuoteLeft />
