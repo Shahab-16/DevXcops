@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const faqData = [
   {
     q: "Why is professional web design important for my business?",
@@ -25,7 +25,7 @@ const faqData = [
 
 const Faqs = () => {
   const [openIndex, setOpenIndex] = useState(null);
-
+  const navigate=useNavigate();
   const toggleFAQ = (i) => {
     if (openIndex === i) setOpenIndex(null);
     else setOpenIndex(i);
@@ -35,16 +35,28 @@ const Faqs = () => {
     <div className="bg-gray-50">
 
       {/* Banner */}
-      <section className="bg-[#121212] text-white py-24 text-center mt-[69px]">
-        <h1 className="text-5xl font-bold mb-4">FAQs</h1>
+      <section className="relative bg-[#121212] text-white py-24 text-center h-[66vh] mt-[69px]">
+        <h1 className="text-5xl font-bold mb-4 mt-8">FAQs</h1>
         <p className="text-lg mb-6">
           Leave us a little info, and we’ll be in touch.
         </p>
 
         {/* Purple Button */}
-        <button className="bg-purple-600 hover:bg-purple-700 px-6 py-3 text-white font-semibold rounded-full transition-all">
+        <button onClick={()=>navigate('/contact')} className=" hover:cursor-pointer  bg-purple-600 hover:bg-purple-700 px-6 py-3 text-white font-semibold rounded-full transition-all">
           Contact Us
         </button>
+         <div className="hidden md:block absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+          <svg
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+            className="w-full  md:h-[120px]"
+          >
+            <path
+              d="M0.00,49.98 C150.00,150.00 349.74,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+              className="fill-white"
+            />
+          </svg>
+        </div>
       </section>
 
       {/* FAQ Content */}

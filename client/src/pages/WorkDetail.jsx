@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import projects from '../assets/project/projects.json';
 
@@ -10,7 +10,7 @@ const StatCard = ({ label, value }) => (
 );
 
 const Pill = ({ children }) => (
-  <span className="inline-block text-xs font-medium px-3 py-1 rounded-full border border-gray-200 bg-white/80">
+  <span className="text-xs md:text-sm font-medium p-2 flex justify-center   rounded-full border border-gray-200 bg-white/80">
     {children}
   </span>
 );
@@ -25,6 +25,9 @@ const Feature = ({ children }) => (
 );
 
 const WorkDetail = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { workName } = useParams();
   const project = projects.find((p) => p.slug === workName);
 
@@ -47,39 +50,78 @@ const WorkDetail = () => {
   return (
     <div className="bg-[#fff] text-black mt-[5%]">
       {/* HERO */}
-      <section
-        className="relative md:h-[56vh] lg:h-[85vh] bg-fit bg-center flex items-center"
-        style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.4)), url(${heroUrl})` }}
-      >
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">{project.title}</h1>
-            <p className="text-white/90 mt-4 text-lg md:text-xl">{project.shortDescription}</p>
+      <section className="relative  md:h-[69vh] lg:h-[85vh] flex items-center overflow-hidden">
 
-            <div className="mt-6 flex flex-wrap gap-3">
+        {/* 🔹 Background image (blurred) */}
+        <div
+          className="absolute inset-0 bg-cover bg-center blur-sm scale-110"
+          style={{ backgroundImage: `url(${heroUrl})` }}
+        />
+
+        {/*  Dark gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40" />
+
+        {/* Content */}
+        <div className="container mt-[20%] md:mt-0 mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mt-10">
+            <h1 className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] font-bold text-5xl">
+              {project.title}
+            </h1>
+
+            <p className="  text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] mt-5 text-lg font-semibold flex justify-center  md:text-xl ">
+              {project.shortDescription}
+            </p>
+
+            <div className="mt-6 grid grid-cols-3 md:grid-cols-5 gap-8">
               {project.techStacks.slice(0, 6).map((t) => (
                 <Pill key={t}>{t}</Pill>
               ))}
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap py-7">
               {project.liveUrl ? (
-                <a href={project.liveUrl} target="_blank" rel="noreferrer" className="px-5 py-2 rounded-full bg-purple-600 hover:bg-purple-800 text-white font-medium transition">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-5 py-2 rounded-full bg-purple-600 hover:bg-purple-800 text-white font-medium transition"
+                >
                   View Live
                 </a>
               ) : (
-                <button className="px-5 py-2 rounded-full bg-purple-600 text-white font-medium opacity-90 cursor-not-allowed">View Live</button>
+                <button className="px-5 py-2 rounded-full bg-purple-600 text-white font-medium opacity-90 cursor-not-allowed">
+                  View Live
+                </button>
               )}
 
               {project.repoUrl && (
-                <a href={project.repoUrl} target="_blank" rel="noreferrer" className="px-5 py-2 rounded-full border border-gray-200 text-black bg-white hover:shadow">
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-5 py-2 rounded-full border border-gray-200 text-black bg-white hover:shadow"
+                >
                   View Repo
                 </a>
               )}
             </div>
           </div>
         </div>
+        <div className="hidden md:block absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+          <svg
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+            className="w-full  md:h-[120px] lg:[150px]"
+          >
+            <path
+              d="M0.00,49.98 C150.00,150.00 349.74,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+              className="fill-white"
+            />
+          </svg>
+        </div>
+
       </section>
+
 
       {/* MAIN */}
       <main className="container mx-auto px-4 py-12">

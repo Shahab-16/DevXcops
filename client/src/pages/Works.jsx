@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import work_img from '../assets/images/work_img.png'; // keep your hero image
 import projects from '../assets/project/projects.json';
 import ProjectCard from '../components/ProjectCard';
 
 const Works = () => {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   return (
     <div className="bg-white text-black">
       {/* HERO */}
       <section
-        className="mt-[18%] md:mt-[5%] relative h-[70vh] md:h-[88vh] bg-cover bg-center flex items-center justify-center"
+        className="mt-[18%] md:mt-[5%] relative h-[70vh] md:h-[79vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${work_img})` }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
@@ -22,6 +25,18 @@ const Works = () => {
           <a href="#projects" className="mt-4 inline-block px-8 py-3 bg-purple-700 text-white text-lg font-semibold rounded-full hover:bg-purple-800 transition">
             See Projects
           </a>
+        </div>
+         <div className="hidden md:block absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+          <svg
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+            className="w-full  md:h-[120px] lg:[150px]"
+          >
+            <path
+              d="M0.00,49.98 C150.00,150.00 349.74,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+              className="fill-white"
+            />
+          </svg>
         </div>
       </section>
 

@@ -84,7 +84,7 @@ export default function Team() {
   return (
     <div className="bg-gray-50 min-h-screen pt-20">
       {/* Hero Section */}
-      <div className="relative h-[85vh] overflow-hidden">
+      <div className="relative h-[79vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600"
@@ -111,6 +111,18 @@ export default function Team() {
               </a>
             </div>
           </div>
+        </div>
+         <div className="hidden md:block absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+          <svg
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+            className="w-full  md:h-[120px] lg:[150px]"
+          >
+            <path
+              d="M0.00,49.98 C150.00,150.00 349.74,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+              className="fill-white"
+            />
+          </svg>
         </div>
       </div>
 

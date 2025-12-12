@@ -53,25 +53,42 @@ The client wants to receive a call.`;
     <div className="bg-gray-50 min-h-screen">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="bg-[#121212] text-white py-24 text-center mt-[69px]">
-        <h1 className="text-5xl font-bold mb-4">
-          Let's Build Something{" "}
-          <span className="text-purple-600">Amazing Together</span>
-        </h1>
+  <section className="flex flex-col text-white bg-black mt-[18%] md:mt-[5%] relative h-[80vh] md:h-[79vh] bg-center  items-center justify-center">
 
-        <p className="text-lg mb-6 text-gray-300 max-w-2xl mx-auto">
-          Whether you need a website, mobile app, logo, UI/UX or complete 
-          branding — we create high-performance digital experiences built 
-          for results.
-        </p>
+  <h1 className=" justify-center text-6xl items-center ml-[15%] md:text-5xl mr-[13%] font-bold mb-4 gap-3  ">
+    Let's Build Something{" "}
+    <span className="text-purple-600">Amazing Together</span>
+  </h1>
 
-        <button className="bg-purple-600 hover:bg-purple-700 px-6 py-3 text-white font-semibold rounded-full transition-all">
-          Contact Us
-        </button>
-      </section>
+  <p className="flex flex-col justify-center ml-2 mr-2 md:text-lg mb-6 text-gray-300 max-w-2xl mx-auto">
+    Whether you need a website, mobile app, logo, UI/UX or complete
+    branding — we create high-performance digital experiences built
+    for results.
+  </p>
+
+  <a href="#contact" className="bg-purple-600 hover:bg-purple-700 px-6  md:px-6 py-3 text-white font-semibold rounded-full transition-all">
+    Contact Us
+  </a >
+
+<div className="hidden md:block absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+  <svg
+    viewBox="0 0 500 150"
+    preserveAspectRatio="none"
+    className="w-full h-[120px]"
+  >
+    <path
+      d="M0.00,49.98 C150.00,150.00 349.74,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+      fill="white"
+    />
+  </svg>
+</div>
+
+
+</section>
+
 
       {/* ================= MAIN CONTACT SECTION ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-16">
+      <section id="contact" className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-16">
 
         {/* ========== LEFT: SERVICES LIST ========== */}
         <div>
@@ -80,7 +97,7 @@ The client wants to receive a call.`;
           </h2>
 
           <p className="text-gray-600 mb-6">
-            Choose the service you're interested in. This helps us understand 
+            Choose the service you're interested in. This helps us understand
             your needs quickly and accurately.
           </p>
 
@@ -90,11 +107,10 @@ The client wants to receive a call.`;
                 key={i}
                 onClick={() => setSelectedService(s.title)}
                 className={`flex items-center justify-between p-4 rounded-lg border shadow-sm text-left transition
-                ${
-                  selectedService === s.title
+                ${selectedService === s.title
                     ? "border-purple-600 bg-purple-50"
                     : "border-gray-300 hover:border-purple-400"
-                }`}
+                  }`}
               >
                 <span className="font-semibold text-black">{s.title}</span>
                 {selectedService === s.title && (

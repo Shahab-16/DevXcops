@@ -98,7 +98,7 @@ const Services = () => {
 
       {/* 🔥 HERO SECTION LIKE ABOUT US */}
       <section
-        className="mt-[18%] md:mt-[5%] relative h-[70vh] md:h-[88vh] bg-cover bg-center flex items-center justify-center"
+        className="mt-[18%] md:mt-[5%] relative h-[70vh] md:h-[79vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${services_img})` }}
       >
         {/* Dark overlay */}
@@ -115,6 +115,18 @@ const Services = () => {
           <button onClick={() => navigate("/contact")} className="mt-4 px-8 py-3 bg-purple-700 text-white text-lg font-semibold rounded-full hover:bg-purple-900 transition">
             Contact Us
           </button>
+        </div>
+         <div className="hidden md:block absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+          <svg
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+            className="w-full  md:h-[120px] lg:[160px]"
+          >
+            <path
+              d="M0.00,49.98 C150.00,150.00 349.74,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+              className="fill-white"
+            />
+          </svg>
         </div>
       </section>
 

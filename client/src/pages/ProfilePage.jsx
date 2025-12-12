@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { FaChevronLeft, FaExternalLinkAlt, FaMapMarkerAlt, FaCalendarAlt, FaCode, FaStar, FaBriefcase, FaUserTie, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import teamMembers from "../assets/TeamMembers/TeamMembers.json";
@@ -10,7 +10,10 @@ export default function ProfilePage() {
   const { workName } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
+  
   const member =
     location.state || teamMembers.find((m) => slugify(m.name) === workName);
 
